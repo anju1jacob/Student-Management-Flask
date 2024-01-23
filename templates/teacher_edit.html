@@ -1,0 +1,45 @@
+{% extends 'teacherbase.html' %}
+
+{% block content %}
+
+<center>
+    <div  style="height: 570px; width: 45%; background-color: rgb(244, 236, 236);margin-top: 50px;padding: 25px;  ">
+        <h2>REGISTRATION FORM</h2><br><br>
+        <img src="{{ url_for('static', filename='image/reg.jpg') }}" alt="" style="float: right; position: absolute; width: 200px;height: 250px; margin-left: 110px; margin-top: 40px;">
+        <form action="" method="post">
+            <div class="row mb-3">
+                <label for="inputfn3" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" value=" {{ data.Name }}" name="name" style="border: 4;">
+                </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+              <div class="col-sm-6">
+                <input type="email" class="form-control" value=" {{ data.Email }}" name="mail" style="border: 4;">
+              </div>
+            </div>
+        
+    
+            
+            <div class="row mb-3">
+                <label  class="col-sm-2 col-form-label">Address</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" value=" {{ data.Address }}" name="address" style="border: 4;">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label  class="col-sm-2 col-form-label">Phone</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" value=" {{ data.Phone }}" name="phone" style="border: 4;">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+          </form>
+    </div>
+</center>
+
+
+{% endblock content %}
+
+

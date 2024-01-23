@@ -1,0 +1,37 @@
+{% extends 'adminbase.html' %}
+
+{% block content %}
+<div class="container" style="margin-top:3% ;">
+    <div class="row">
+        <div class="card" id="box1">
+            <div class="card-body">
+                <p class="card-text" >
+                <h3 style="color: white;">{{ teacher_count }}</h3>
+                <h4 style="color: white;">Total Tachers</h4>
+                
+                </p>
+                <div class="col-md-4 market-update-right">
+                    <i class="fa fa-user-md" aria-hidden="true"></i>
+                  </div>
+            </div>
+        </div>
+    
+        <div class="card" id="box2">
+            <div class="card-body">
+                <p class="card-text" >
+                <h3 style="color: white;">{{ stud_count }}</h3>
+                <h4 style="color: white;">Total Students</h4>
+                <p  style="color: white;">Want to admit : {{ stud_count_false }} </p>
+                </p>
+                <div class="col-md-4 market-update-right">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                  </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<br><br>
+
+{% endblock content %}

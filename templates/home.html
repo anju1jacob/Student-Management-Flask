@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container-fluid mt-3">
+    <div class="home-text" style="margin-top: 150px; margin-left: 60px;">
+                
+        <h3 style="color: rgb(64, 0, 128); letter-spacing: 3px;">Welcome to JLN College</h3>
+        <h1 style="color: rgb(64, 0, 128);"> Student Portal</h1>
+        <p style="color: rgb(64, 0, 128);">The purpose of Schools is to prepare students with promise
+            to enhance their <br>intellectual, physical, social, emotional, spiritual,
+            and artistic growth so that <br>they may realize their power for good
+            as citizens</p>
+    <!--login-btn-->
+    <button class="btn btn-primary"><a href="stud_reg" class="main-login" style="border-radius: 5px;color: white; text-decoration: none;">Register</a></button>
+    <button class="btn btn-primary"><a href="login" class="main-login" style="border-radius: 5px;color: white; text-decoration: none;">Login</a></button>
+    </div>
+    <img src="{{ url_for('static', filename='image/hero.png') }}" alt="" style="float: right;margin-top: -350px; height: 670px;margin-right: 100px;">
+      </div>
+
+{% endblock content %}

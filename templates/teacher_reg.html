@@ -1,0 +1,55 @@
+{% extends 'adminbase.html' %}
+
+{% block content %}
+
+<center>
+    <div  style="height: 570px; width: 45%; background-color: rgb(244, 236, 236);margin-top: 50px;padding: 25px;  ">
+        <h2>REGISTRATION FORM</h2><br><br>
+        <img src="{{ url_for('static', filename='image/reg.jpg') }}" alt="" style="float: right; position: absolute; width: 200px;height: 250px; margin-left: 110px; margin-top: 40px;">
+        <form action="" method="post">
+            <div class="row mb-3">
+                <label for="inputfn3" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="inputfn3" name="name" style="border: 4;">
+                </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+              <div class="col-sm-6">
+                <input type="email" class="form-control" id="inputEmail3" name="mail" style="border: 4;">
+              </div>
+            </div>
+            <div class="row mb-3">
+                <label  class="col-sm-2 col-form-label">UserName</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" name="username" style="border: 4;">
+                </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+              <div class="col-sm-6">
+                <input type="password" class="form-control" name="pwd" id="inputPassword3">
+              </div>
+            </div>
+            
+            <div class="row mb-3">
+                <label  class="col-sm-2 col-form-label">Address</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" name="address" style="border: 4;">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label  class="col-sm-2 col-form-label">Phone</label>
+                <div class="col-sm-6">
+                  <input type="number" class="form-control" name="phone" style="border: 4;">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+          </form>
+    </div>
+</center>
+
+
+{% endblock content %}
+
+

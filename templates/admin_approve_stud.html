@@ -1,0 +1,40 @@
+{% extends 'adminbase.html' %}
+
+
+{% block content %}
+
+<div class="container" style="margin-top: 3%;">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h6 class="panel-title text-center" style="color: black;">Students</h6><hr>
+      </div>
+      <table class="table table-hover" id="dev-table">
+        <thead>
+          <tr>
+  
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Action</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        {% for d in data %}
+        <tr>
+  
+          <td> {{d.Name}} </td>
+          <td>{{d.Email}}</td>
+          <td>{{d.Address}}</td>
+          <td>{{d.Phone}}</td>
+          
+          <td><a class="btn btn-primary btn-sm" href="confirmstud/{{ d.stud_id }}"><span class="fa fa-check fa-lg"></span></a></td>
+          <td><a class="btn btn-danger btn-sm" href="admin_delete_stud/{{ d.stud_id }}"><span class="fa fa-trash-o fa-lg"></span></a></td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+  
+
+{% endblock content %}
